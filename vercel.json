@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
+  "framework": "create-react-app",
+  "buildCommand": "npm ci --legacy-peer-deps && npm run build",
+  "installCommand": "npm ci --legacy-peer-deps",
   "outputDirectory": "build",
   "env": {
     "REACT_APP_API_URL": "https://prompt-craftery-backend.vercel.app/api",

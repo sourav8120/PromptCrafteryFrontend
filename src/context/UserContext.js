@@ -7,7 +7,9 @@ const getApiBase = () => {
   if (typeof window !== 'undefined') {
     const host = window.location.hostname;
     if (host === 'localhost' || host === '127.0.0.1') return 'http://localhost:5001/api';
-    if (host.includes('vercel.app')) return 'https://prompt-craftery-backend.vercel.app/api';
+    if (host.includes('prompt-craftery-frontend') || host.includes('vercel.app')) {
+      return 'https://prompt-craftery-backend.vercel.app/api';
+    }
   }
 
   return 'https://prompt-craftery-backend.vercel.app/api';
